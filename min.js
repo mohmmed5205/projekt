@@ -83,6 +83,30 @@ function countArrays(arr) {
   return count;
 }
 
-console.log(countArrays([2,8,[6],3,3,5,3,4,[5,4]])); // 2
+console.log(countArrays([2,8,[6],3,3,5,3,4,[5,4]]));
 console.log(countArrays([2,8,[6,3,3],[4],5,[3,4,[5,4]]])); 
+
+
+// 10
+
+const date = new Date();
+const attendanceTable = [
+  {name:'mohammed', bioType:'in', bioTime: new Date(date.setHours(8,10)) },
+  {name:'salem', bioType:'in', bioTime:  new Date(date.setHours(8,20))},
+  {name:'Omar', bioType:'out', bioTime:  new Date(date.setHours(12,10))},
+  {name:'mohammed', bioType:'in', bioTime:  new Date(date.setHours(8,15))},
+  {name:'salem', bioType:'in', bioTime:  new Date(date.setHours(8,23))},
+  {name:'mohammed', bioType:'out', bioTime:  new Date(date.setHours(12,10))}
+];
+
+function presentEmployees(records) {
+  const present = new Set();
+  records.forEach(r => {
+    if (r.bioType === 'in') present.add(r.name);
+  });
+  return [...present];
+}
+
+console.log(presentEmployees(attendanceTable)); 
+
 
