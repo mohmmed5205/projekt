@@ -1,3 +1,5 @@
+
+
 interface UserProfile {
   id: string;
 
@@ -5,6 +7,7 @@ interface UserProfile {
     theme: "light" | "dark"|"blue";
   };
 }
+// هنا اضفنا في الثيوم لون الازرق عشان يكون من الخيارات الي تقدر تدخلها
 
 let user: UserProfile = {
   id: "123",
@@ -22,6 +25,7 @@ const user1 : user1= {
 };
 
 user1.age = 24;
+//  هنا خلنا العمر اختياري عشان نقدر نوصل له و مايكون اجباري تدخله 
 
 
 const searchParams = new URLSearchParams(window.location.search);
@@ -105,8 +109,4 @@ let cat = { purr: true , bark:true};
 let dog = cat as Dog;
 
 
-const name = "Matt";
-
-
-
-import Diff from "diff";
+ // المساله 9و 10 حلها تعديل في الملفات فقط
