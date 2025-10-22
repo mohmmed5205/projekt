@@ -22,17 +22,18 @@ type user1 = {
 }
 const user1 : user1= {
   name: "Matt",
+  
 };
 
 user1.age = 24;
-//  هنا خلنا العمر اختياري عشان نقدر نوصل له و مايكون اجباري تدخله 
+//  هنا خلنيا العمر اختياري عشان نقدر نوصل له و مايكون اجباري تدخله 
 
 
 const searchParams = new URLSearchParams(window.location.search);
 
 const id = searchParams.get("id");
 
-console.log(id?.toUpperCase());    //لان هنا النت ما تعرف هل بيرجع استرنق او بيكون فاضي ف تخليها اختياريه
+console.log(id?.toUpperCase());    //لان هنا انت ما تعرف هل بيرجع استرنق او بيكون فاضي ف تخليها اختياريه
 
 
 
